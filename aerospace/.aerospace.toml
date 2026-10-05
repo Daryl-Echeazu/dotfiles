@@ -1,5 +1,6 @@
 # AeroSpace config. Docs: https://nikitabobko.github.io/AeroSpace/guide
 # Reload after editing: alt-shift-; then esc
+# Lives in ~/dotfiles/aerospace (linked here by GNU Stow); changes push to GitHub hourly.
 
 config-version = 2
 persistent-workspaces = [
