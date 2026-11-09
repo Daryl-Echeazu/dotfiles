@@ -149,15 +149,13 @@ if.app-id = 'com.mitchellh.ghostty'
 if.during-aerospace-startup = true  # only sort the first window at login; later windows/tabs stay where you open them
 run = ['move-node-to-workspace 2']
 
-# 1: browsers
+# 1: browsers (always)
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
-if.during-aerospace-startup = true  # only sort the first window at login; later windows/tabs stay where you open them
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-if.during-aerospace-startup = true  # only sort the first window at login; later windows/tabs stay where you open them
 run = ['move-node-to-workspace 1']
 
 # A: Claude
