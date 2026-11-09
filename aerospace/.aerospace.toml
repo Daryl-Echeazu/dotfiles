@@ -77,7 +77,7 @@ alt-c = ['workspace C', 'exec-and-forget open -a "Calendar"']
 alt-d = ['workspace D', 'exec-and-forget open -a "Discord"']
 alt-e = ['workspace E', 'exec-and-forget open -a "Finder"'] # E for Explorer
 # alt-f is fullscreen
-alt-g = 'workspace G'
+alt-g = ['workspace G', 'exec-and-forget open -a "ChatGPT"']
 alt-i = 'workspace I'
 alt-m = ['workspace M', 'exec-and-forget open -a "Messages"']
 alt-n = ['workspace N', 'exec-and-forget open -a "Microsoft Outlook"']
@@ -160,14 +160,15 @@ if.app-id = 'com.google.Chrome'
 if.during-aerospace-startup = true  # only sort the first window at login; later windows/tabs stay where you open them
 run = ['move-node-to-workspace 1']
 
-# A: AI apps
+# A: Claude
 [[on-window-detected]]
 if.app-id = 'com.anthropic.claudefordesktop'
 run = ['move-node-to-workspace A']
 
+# G: ChatGPT (bundle id is com.openai.codex)
 [[on-window-detected]]
 if.app-id = 'com.openai.codex'
-run = ['move-node-to-workspace A']
+run = ['move-node-to-workspace G']
 
 # O: Obsidian
 [[on-window-detected]]
