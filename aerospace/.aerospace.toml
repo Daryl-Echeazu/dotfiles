@@ -143,20 +143,21 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # App -> workspace rules. These run whenever a matching window opens.
 
-# 2: terminal
-[[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-if.during-aerospace-startup = true  # only sort the first window at login; later windows/tabs stay where you open them
-run = ['move-node-to-workspace 2']
-
-# 1: browsers (always)
-[[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
-run = ['move-node-to-workspace 1']
-
+# 1: Chrome (always)
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = ['move-node-to-workspace 1']
+
+# 2: Zen (always)
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = ['move-node-to-workspace 2']
+
+# 3: terminal
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+if.during-aerospace-startup = true  # only sort the first window at login; later windows/tabs stay where you open them
+run = ['move-node-to-workspace 3']
 
 # A: Claude
 [[on-window-detected]]
