@@ -75,12 +75,12 @@ alt-a = ['workspace A', 'exec-and-forget open -a "Claude"']
 alt-b = 'workspace B'
 alt-c = ['workspace C', 'exec-and-forget open -a "Calendar"']
 alt-d = ['workspace D', 'exec-and-forget open -a "Discord"']
-alt-e = ['workspace E', 'exec-and-forget open -a "Finder"'] # E for Explorer
+alt-e = ['workspace E', 'exec-and-forget open -a "Microsoft Outlook"'] # E for Email
 # alt-f is fullscreen
 alt-g = ['workspace G', 'exec-and-forget open -a "ChatGPT"']
 alt-i = 'workspace I'
 alt-m = ['workspace M', 'exec-and-forget open -a "Messages"']
-alt-n = ['workspace N', 'exec-and-forget open -a "Microsoft Outlook"']
+alt-n = ['workspace N', 'exec-and-forget open -a "Notion Calendar"']
 alt-o = ['workspace O', 'exec-and-forget open -a "Obsidian"']
 alt-p = 'workspace P'
 alt-q = 'workspace Q'
@@ -179,9 +179,14 @@ run = ['move-node-to-workspace O']
 if.app-id = 'com.TickTick.task.mac'
 run = ['move-node-to-workspace T']
 
-# N: Outlook
+# E: Outlook (E for Email)
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Outlook'
+run = ['move-node-to-workspace E']
+
+# N: Notion Calendar
+[[on-window-detected]]
+if.app-id = 'com.cron.electron'
 run = ['move-node-to-workspace N']
 
 # M: Messages
